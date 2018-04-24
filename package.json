@@ -1,0 +1,27 @@
+{
+    "name": "backoff-time",
+    "version": "1.0.0",
+    "description": "Zero deps backoff time",
+    "main": "index.js",
+    "scripts": {
+        "test": "node_modules/mocha/bin/_mocha --bail --check-leaks test/",
+        "test-ci": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/revington/backoff-time.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/revington/backoff-time/issues"
+    },
+    "homepage": "https://github.com/revington/backoff-time#readme",
+    "devDependencies": {
+        "coveralls": "^3.0.0",
+        "istanbul": "^0.4.5",
+        "mocha": "^5.1.1",
+        "mocha-lcov-reporter": "^1.3.0"
+    }
+}
